@@ -1,0 +1,15 @@
+<h1>Sign Up</h1>
+<b style="color: red">{{ error }}</b>
+
+<form action="" method="post">
+    {% csrf_token %}
+    <ul>
+    	<li><b>First Name: </b>{{ form.first_name }}</li>
+    	<li><b>Last Name: </b>{{ form.last_name }}</li>
+    	<li><b>Username: </b>{{ form.username }}</li>
+    	<li><b>Email: </b>{{ form.email }}</li>
+    	<li><b>Password: </b>{{ form.password }}</li>
+    	<li><b>Password (again): </b>{{ form.password_again }}</li>
+    </ul>
+    <input type="submit" value="Submit">
+</form>

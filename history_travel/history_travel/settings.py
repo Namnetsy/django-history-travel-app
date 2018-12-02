@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'history_wiki.apps.HistoryWikiConfig',
+    'auth_wiki.apps.AuthWikiConfig',
     'froala_editor',
 ]
 
