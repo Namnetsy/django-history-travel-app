@@ -2,7 +2,8 @@
 <b style="color: red">{{ error }}</b>
 
 <form action="" method="post">
-    {% csrf_token %}
+	{% csrf_token %}
+	{{ form.errors }}
     <ul>
     	<li><b>First Name: </b>{{ form.first_name }}</li>
     	<li><b>Last Name: </b>{{ form.last_name }}</li>

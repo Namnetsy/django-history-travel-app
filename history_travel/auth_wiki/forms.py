@@ -9,4 +9,5 @@ class SignUp(forms.Form):
 	password_again = forms.CharField(widget=forms.PasswordInput, max_length=30, min_length=8)
 
 class SignIn(forms.Form):
-	pass
+	email = forms.EmailField()
+	password = forms.CharField(widget=forms.PasswordInput, max_length=30, min_length=8)
