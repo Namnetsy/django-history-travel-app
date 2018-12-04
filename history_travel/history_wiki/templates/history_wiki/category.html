@@ -1,0 +1,9 @@
+{% autoescape off %}
+{% for key, item in posts.items %}
+	<div style="border: 1px solid black">
+		<b>Title: {{ item.title }}<b><br>
+		<b>Author: {{ item.author }}<b><br>
+		<b>Description: {{ item.description }}<b><br>
+	</div>
+{% endfor %}
+{% endautoescape %}
