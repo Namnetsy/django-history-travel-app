@@ -1,0 +1,18 @@
+{% if page != None %}
+    {% for post in page %}
+        <hr><div>
+            <h3>Title: {{ post.title }}</h3>
+            <p>Description: {{ post.description }}</p>
+        </div><hr>
+    {% endfor %}
+    {% if next_page != None %}
+        <a href="{% url 'posts_list' next_page %}">Next</a>
+    {% endif %}
+    {% if previous_page != None %}
+        <a href="{% url 'posts_list' previous_page %}">Previous</a>
+    {% endif %}
+{% endif %}
+
+{% if page == None %}
+        <h1>Page not found!</h1>
+{% endif %}
