@@ -3,10 +3,27 @@ from django.core.paginator import Paginator
 
 from .models import Category, Post
 
-POSTS_ON_ONE_PAGE = 2
+POSTS_ON_ONE_PAGE = 4
 
 def index(request):
-	return render(request, 'history_wiki/index.html', {})
+	context = {}
+
+	paginator = Paginator(Post.objects.all(), POSTS_ON_ONE_PAGE)
+	page_number = 1
+
+	try:
+		page = paginator.page(1)
+
+		context.update({'page': page.object_list})
+
+		if paginator.page(page_number).has_next():
+			context.update({'next_page': page_number + 1})
+		else:
+			context.update({'next_page': None})
+	except:
+		context.update({'page': None})
+
+	return render(request, 'history_wiki/index.html', context)
 
 def posts_list(request, page_number):
 	context = {}

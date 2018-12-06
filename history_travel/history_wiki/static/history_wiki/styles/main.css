@@ -1,0 +1,152 @@
+/* page */
+
+.page {
+	position: relative !important;
+	min-width: 960px !important;
+    min-height: 100% !important;
+    background: url(../images/background.png);
+    background-size: 2048px 1080px;
+}
+
+/* Header */
+
+.header {
+	height: 160px;
+	text-align: center;
+}
+
+.header__logo {
+	height: 100%;
+}
+
+/* Main Content */
+
+.main-content {
+	margin-bottom: 50px;
+}
+
+/* Sidebar */
+
+.sidebar {
+	position: absolute;
+	top: 160px;
+	bottom: 0;
+	width: 250px !important;
+	background: rgba(117, 76, 36, .5);
+	margin-bottom: 50px;
+}
+
+.sidebar__nav {
+	width: 200px;
+	margin: 50px auto;
+}
+
+.sidebar__nav-list {
+	list-style-type: none;
+}
+
+.sidebar__item {
+	margin-bottom: 10px;
+}
+
+.sidebar__link {
+	display: block;
+	width: 200px;
+	height: 40px;
+	background: url(../images/button.png);
+	background-size: 200px 40px;
+	text-align: center;
+	line-height: 2;
+	text-decoration: none;
+	color: white;
+	font-size: 19px;
+}
+
+.sidebar__link:hover {
+	color: black;
+}
+
+/* Top Panel */
+
+.top-panel {
+	margin-left: 250px;
+	padding-left: 10px;
+	background: rgba(198, 175, 151, .5);
+	height: 40px;
+}
+
+.top-panel__nav {
+	padding-top: 5px;
+}
+
+.top-panel__nav-list {
+	list-style-type: none;
+}
+
+.top-panel__item {
+	float: left;
+	padding-left: 9px;
+}
+
+.top-panel__link {
+	display: block;
+	width: 150px;
+	height: 30px;
+	background: url(../images/button.png);
+	background-size: 150px 30px;
+	text-align: center;
+	line-height: 1.8;
+	text-decoration: none;
+	color: white;
+}
+
+.top-panel__link:hover {
+	color: black;
+}
+
+/* Articles List */
+
+.articles-list {
+	margin-left: 250px;
+}
+
+.articles-list::after { /* Hack for margin-bottom */
+	content: 'nothing';
+	visibility: hidden;
+	display: block;
+	margin: 50px;
+}
+
+/* Footer */
+
+.footer::before { /* clearfix */
+	content: '';
+	display: table;
+	clear: both;
+}
+
+.footer {
+	width: 100%;
+	height: 50px;
+	position: absolute;
+    bottom: 0px;
+    background: rgba(24, 15, 6, .5);
+}
+
+.footer__copyright {
+	display: block;
+	margin: 10px;
+	margin-left: 15px;
+	font-size: 20px;
+	color: white;
+}
+
+.footer__team-link {
+	text-decoration: none;
+	color: #aba8a8;
+}
+
+.footer__team-link:hover {
+	color: white;
+	border-bottom: 1px solid white;
+}
