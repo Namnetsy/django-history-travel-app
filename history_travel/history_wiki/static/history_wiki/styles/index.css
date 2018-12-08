@@ -29,6 +29,11 @@
 
 .post__heading:hover {
 	color: black;
+	transition: 0.3s;
+}
+
+.post__heading:not(:hover) {
+	transition: 0.3s;
 }
 
 .post__image {
