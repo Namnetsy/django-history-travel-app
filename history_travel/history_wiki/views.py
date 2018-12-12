@@ -45,7 +45,7 @@ def posts_list(request, page_number):
 	except:
 		context.update({'page': None})
 
-	return render(request, 'history_wiki/posts_list.html', context)
+	return render(request, 'history_wiki/posts-list.html', context)
 
 def categories(request):
 	categories = Category.objects.values()
@@ -69,3 +69,12 @@ def category(request, category_id):
 	}
 
 	return render(request, 'history_wiki/category.html', context)
+
+def post(request, id):
+	post = get_object_or_404(Post, id=id)
+
+	context = {
+		'post': post,
+	}
+
+	return render(request, 'history_wiki/opened-article.html', context)

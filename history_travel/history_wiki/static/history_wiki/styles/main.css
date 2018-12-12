@@ -34,6 +34,7 @@
 	width: 250px !important;
 	background: rgba(117, 76, 36, .5);
 	margin-bottom: 50px;
+	font-family: 'Marmelad', sans-serif;
 }
 
 .sidebar__nav {
@@ -79,6 +80,7 @@
 	padding-left: 10px;
 	background: rgba(198, 175, 151, .5);
 	height: 40px;
+	font-family: 'Marmelad', sans-serif;
 }
 
 .top-panel__nav {
@@ -121,6 +123,7 @@
 
 .articles-list {
 	margin-left: 250px;
+	font-family: 'Fira Sans Condensed', sans-serif;
 }
 
 .articles-list::after { /* Hack for margin-bottom */
@@ -144,6 +147,7 @@
 	position: absolute;
     bottom: 0px;
     background: rgba(24, 15, 6, .5);
+    font-family: 'Fira Sans Condensed', sans-serif;
 }
 
 .footer__copyright {
@@ -152,14 +156,4 @@
 	margin-left: 15px;
 	font-size: 20px;
 	color: white;
-}
-
-.footer__team-link {
-	text-decoration: none;
-	color: #aba8a8;
-}
-
-.footer__team-link:hover {
-	color: white;
-	border-bottom: 1px solid white;
 }

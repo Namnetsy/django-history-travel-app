@@ -12,6 +12,8 @@
 	float: left;
 	padding: 3px;
 	overflow: hidden;
+	line-height: 1.4;
+	font-family: 'Fira Sans Condensed', sans-serif;
 }
 
 .post__heading {
