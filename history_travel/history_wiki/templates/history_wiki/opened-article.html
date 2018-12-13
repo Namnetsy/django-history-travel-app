@@ -1,59 +1,19 @@
+{% extends 'history_wiki/base-layout.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html class="page">
-	<head>
-		<meta charset="utf-8">
-		<title>{{ post.title }}</title>
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed|Marmelad">
-		<link rel="stylesheet" href="{% static 'history_wiki/styles/reset.css' %}">
-		<link rel="stylesheet" href="{% static 'history_wiki/styles/main.css' %}">
-		<link rel="stylesheet" href="{% static 'history_wiki/styles/opened-article.css' %}">
-	</head>
-	<body>
-		<header class="header">
-			<img class="header__logo" src="{% static 'history_wiki/images/logo.png' %}" alt="History Travel">
-		</header>
-		<main class="main-content">
-			<aside class="sidebar">
-				<nav class="sidebar__nav">
-					<ul class="sidebar__nav-list">
-						<li class="sidebar__item">
-							<a class="sidebar__link" href="{% url 'index' %}">Головна</a>
-						</li>
-						<li class="sidebar__item">
-							<a class="sidebar__link" href="{% url 'categories' %}">Категорії</a>
-						</li>
-						<li class="sidebar__item">
-							<a class="sidebar__link" href="#">Про сайт</a>
-						</li>
-					</ul>
-				</nav>
-			</aside>
-			<aside class="top-panel">
-				<nav class="top-panel__nav">
-					<ul class="top-panel__nav-list">
-						<li class="top-panel__item">
-							<a class="top-panel__link" href="#">Пошук</a>
-						</li>
-					</ul>
-				</nav>
-			</aside>
-			<article class="articles-list">
-				<section class="article">
-					<small class="article__category"><a class="article__category-link" href="{% url 'categories' %}">Категорії</a>/<a class="article__category-link" href="{% url 'category' post.category.id %}">{{ post.category}}</a></small>
-					<h1 class="top-panel__link article__heading">{{ post.title }}</h1>
-					{% autoescape off %}
-					<div class="article__text">{{ post.text }}</div>
-					{% endautoescape %}
-					<ul class="article__info">
-						<li class="article__item">Автор: {{ post.author }}</li>
-						<li class="article__item">Опубліковано: {{ post.published_date }}</li>
-					</ul>
-				</section>
-			</article>
-		</main>
-		<footer class="footer">
-			<small class="footer__copyright">Copyright &copy; 2018 SoftWest</small>
-		</footer>
-	</body>
-</html>
+{% block title %}Про сайт{% endblock %}
+{% block style %}
+	<link rel="stylesheet" href="{% static 'history_wiki/styles/opened-article.css' %}">
+{% endblock %}
+{% block content %}
+	<section class="article">
+		<small class="article__category"><a class="article__category-link" href="{% url 'categories' %}">Категорії</a>/<a class="article__category-link" href="{% url 'category' post.category.id %}">{{ post.category}}</a></small>
+		<h1 class="top-panel__link article__heading">{{ post.title }}</h1>
+		{% autoescape off %}
+		<div class="article__text">{{ post.text }}</div>
+		{% endautoescape %}
+		<ul class="article__info">
+			<li class="article__item">Автор: {{ post.author }}</li>
+			<li class="article__item">Опубліковано: {{ post.published_date }}</li>
+		</ul>
+	</section>
+{% endblock %}

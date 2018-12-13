@@ -78,3 +78,6 @@ def post(request, id):
 	}
 
 	return render(request, 'history_wiki/opened-article.html', context)
+
+def about(request):
+	return render(request, 'history_wiki/about-us.html', {})

@@ -1,0 +1,23 @@
+.articles-list {
+	background: rgba(117, 76, 36, .5);
+	margin: 10px 10px 60px 260px;
+	height: 100%;
+}
+
+.info {
+	padding: 10px;
+	text-align: center;
+}
+
+.info__heading {
+	font-size: 35px;
+	margin-top: 20px;
+	color: white;
+}
+
+.info__text {
+	margin-top: 20px;
+	color: white;
+	line-height: 1.3;
+	font-size: 20px;
+}

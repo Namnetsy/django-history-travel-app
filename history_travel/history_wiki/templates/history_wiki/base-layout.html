@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html class="page">
+	<head>
+		<meta charset="utf-8">
+		<title>{% block title %}{% endblock %}</title>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed|Marmelad">
+		<link rel="stylesheet" href="{% static 'history_wiki/styles/reset.css' %}">
+		<link rel="stylesheet" href="{% static 'history_wiki/styles/main.css' %}">
+		{% block style %}{% endblock %}
+	</head>
+	<body>
+		<header class="header">
+			<img class="header__logo" src="{% static 'history_wiki/images/logo.png' %}" alt="History Travel">
+		</header>
+		<main class="main-content">
+			<aside class="sidebar">
+				<nav class="sidebar__nav">
+					<ul class="sidebar__nav-list">
+						<li class="sidebar__item">
+							<a class="sidebar__link" href="{% url 'index' %}">Головна</a>
+						</li>
+						<li class="sidebar__item">
+							<a class="sidebar__link" href="{% url 'categories' %}">Категорії</a>
+						</li>
+						<li class="sidebar__item">
+							<a class="sidebar__link" href="{% url 'about' %}">Про сайт</a>
+						</li>
+					</ul>
+				</nav>
+			</aside>
+			<aside class="top-panel">
+				<nav class="top-panel__nav">
+					<ul class="top-panel__nav-list">
+						<li class="top-panel__item">
+							<a class="top-panel__link" href="#">Пошук</a>
+						</li>
+					</ul>
+				</nav>
+			</aside>
+			<article class="articles-list">
+				{% block content %}{% endblock %}
+			</article>
+		</main>
+		<footer class="footer">
+			<small class="footer__copyright">Copyright &copy; 2018 SoftWest</small>
+		</footer>
+	</body>
+</html>
