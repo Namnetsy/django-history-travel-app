@@ -1,0 +1,31 @@
+.categories {
+	padding: 15px;
+}
+
+.categories__heading {
+	text-align: center;
+	font-size: 35px;
+	margin-bottom: 20px;
+}
+
+.categories__item {
+	display: block;
+	width: 98%;
+	height: 40px;
+	background: rgba(117, 76, 36, .5);
+	padding: 10px;
+	line-height: 1.7;
+	text-decoration: none;
+	color: white;
+	font-size: 22px;
+	margin-bottom: 5px;
+}
+
+.categories__item:hover {
+	background: rgba(117, 76, 36, .7);
+	transition: .3s;
+}
+
+.categories__item:not(:hover) {
+	transition: .3s;
+}
