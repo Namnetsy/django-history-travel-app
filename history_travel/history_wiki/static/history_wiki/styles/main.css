@@ -126,13 +126,6 @@
 	font-family: 'Fira Sans Condensed', sans-serif;
 }
 
-.articles-list::after { /* Hack for margin-bottom */
-	content: 'nothing';
-	visibility: hidden;
-	display: block;
-	margin: 50px;
-}
-
 /* Footer */
 
 .footer::before { /* clearfix */

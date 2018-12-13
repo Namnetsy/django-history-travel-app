@@ -3,6 +3,7 @@
 {% block title %}History Travel{% endblock %}
 {% block style %}
 	<link rel="stylesheet" href="{% static 'history_wiki/styles/index.css' %}">
+	<link rel="stylesheet" href="{% static 'history_wiki/styles/pages-nav.css' %}">
 {% endblock %}
 {% block content %}
 	{% if page != None %}
@@ -15,6 +16,12 @@
 		{% endfor %}
 	{% endif %}
 	{% if next_page != None %}
-		<a href="{% url 'posts_list' next_page %}">Next</a>
+		<nav class="article-nav">
+			<ul class="article-nav__nav-list">
+				<li class="article-nav__item article-nav_right-item">
+					<a class="article-nav__item-anchor" href="{% url 'posts_list' next_page %}">Наступні</a>
+				</li>
+			</ul>
+		</nav>
 	{% endif %}
 {% endblock %}
