@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.core.paginator import Paginator
 
 from .models import Category, Post
+from .forms import Search
 
 POSTS_ON_ONE_PAGE = 4
 
@@ -81,3 +82,26 @@ def post(request, id):
 
 def about(request):
 	return render(request, 'history_wiki/about-us.html', {})
+
+def search(request):
+	context = {}
+	output = None
+	count_searched_posts = None
+
+	if request.method == 'GET':
+		form = Search(request.GET)
+
+		if form.is_valid():
+			result = Post.objects.filter(title__icontains=form.cleaned_data['query'])
+			output = result
+			count_searched_posts = len(result)
+		else:
+			form = Search()
+
+		context.update({
+			'form': form,
+			'output': output,
+			'count_searched_posts': count_searched_posts,
+		})
+
+	return render(request, 'history_wiki/search.html', context)

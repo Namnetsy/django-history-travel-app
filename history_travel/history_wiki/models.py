@@ -13,8 +13,16 @@ class Post(models.Model):
 	def __str__(self):
 		return self.title
 
+	class Meta:
+		verbose_name = 'стаття'
+		verbose_name_plural = 'статті'
+
 class Category(models.Model):
 	name = models.CharField(max_length=200)
 
 	def __str__(self):
 		return self.name
+
+	class Meta:
+		verbose_name = 'категорія'
+		verbose_name_plural = 'категорії'

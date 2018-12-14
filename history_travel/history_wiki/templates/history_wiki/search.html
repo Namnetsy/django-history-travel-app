@@ -1,0 +1,14 @@
+<form action="" method="GET">
+	{% csrf_token %}
+	{{ form.query }}
+	<input type="submit" value="Submit">
+</form>
+
+{% if count_searched_posts == 0 %}
+	<h1>По вашому запиту нажаль нічого не знайдено :[</h1>
+{% endif %}
+{% if count_searched_posts > 0 %}
+	<h1>Знайдено {{ count_searched_posts }}:</h1>
+{% endif %}
+
+{{ output }}
