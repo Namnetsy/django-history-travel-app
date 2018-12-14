@@ -4,6 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>{% block title %}{% endblock %}</title>
+		<meta name="description" content="{% block page_description %}{% endblock %}">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed|Marmelad">
 		<link rel="stylesheet" href="{% static 'history_wiki/styles/reset.css' %}">
 		<link rel="stylesheet" href="{% static 'history_wiki/styles/main.css' %}">
@@ -33,7 +34,7 @@
 				<nav class="top-panel__nav">
 					<ul class="top-panel__nav-list">
 						<li class="top-panel__item">
-							<a class="top-panel__link" href="#">Пошук</a>
+							<a class="top-panel__link" href="{% url 'search' %}">Пошук</a>
 						</li>
 					</ul>
 				</nav>

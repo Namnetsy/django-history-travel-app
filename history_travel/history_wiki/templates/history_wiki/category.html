@@ -1,6 +1,7 @@
 {% extends 'history_wiki/base-layout.html' %}
 {% load static %}
 {% block title %}{{ category_name }}{% endblock %}
+{% block page_description %}Всі статті з категорії {{ category__name }}{% endblock %}
 {% block style %}
 	<link rel="stylesheet" href="{% static 'history_wiki/styles/index.css' %}">
 	<link rel="stylesheet" href="{% static 'history_wiki/styles/pages-nav.css' %}">

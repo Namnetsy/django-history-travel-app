@@ -1,6 +1,7 @@
 {% extends 'history_wiki/base-layout.html' %}
 {% load static %}
 {% block title %}History Travel{% endblock %}
+{% block page_description %}Сторінка №{{ page_number }}{% endblock %}
 {% block style %}
     <link rel="stylesheet" href="{% static 'history_wiki/styles/index.css' %}">
     <link rel="stylesheet" href="{% static 'history_wiki/styles/pages-nav.css' %}">
@@ -32,4 +33,5 @@
     {% if page == None %}
         <h1 style="text-align: center; font-size: 35px;">Сторінку не знайдено!</h1>
     {% endif %}
+    {{ page_number }}
 {% endblock %}

@@ -1,6 +1,7 @@
 {% extends 'history_wiki/base-layout.html' %}
 {% load static %}
 {% block title %}{{ post.title }}{% endblock %}
+{% block page_description %}{{ post.description }}{% endblock %}
 {% block style %}
 	<link rel="stylesheet" href="{% static 'history_wiki/styles/opened-article.css' %}">
 {% endblock %}
