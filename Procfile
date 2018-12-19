@@ -1,0 +1,1 @@
+web: gunicorn history_travel.wsgi
