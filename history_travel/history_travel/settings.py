@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'history_wiki.apps.HistoryWikiConfig',
     'froala_editor',
+    'django.contrib.sitemaps',
 ]
 
 MIDDLEWARE = [
